@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+body{
+  background-color: #f4ffff;
+  margin: 10px 50px 10px 50px;
+  padding: 0;
+  font-family: 'Nanum Myeongjo', serif;
+  zoom: 1;
+}
+
+.side{
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.side a{
+  padding: 5px;
+  color: black;
+}
+
+h1{
+  float:left;
+  margin:33px 0 0;
+}
+
+small{
+  font-size: 0.5em;
+}
+
+/*
+table{
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+thead{
+  background-color: #D4F4FA;
+}
+
+th{
+  padding: 10px 0px 10px 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+tbody{
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+nav>table>thead>tr>th>a:hover tbody{
+  opacity: 1;
+  visibility: visible;
+}
+*/
+
+/*
+nav{
+  width:100%
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0px;
+  background-color: white;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-menu>li{
+  float: left;
+  position: relative;
+  background: #D4F4FA;
+}
+
+#main-menu>li>a{
+  display: block;
+  padding: 14px 36px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.85em;
+  color: black;
+  letter-spacing: 0.05em;
+  border-right: 1px solid black;
+}
+
+#main-menu>li:nth-child(1)>a{
+  border-left: 1px solid black;
+}
+
+.submenu{
+  position: absolute;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu>li{
+  padding: 16px 28px;
+  border-bottom: 1px solid black;
+}
+
+#main-menu>li:hover .submenu{
+  opacity: 1;
+  visibility: visible;
+}
+
+.other{
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  display: inline-block;
+  margin: 20px;
+}
+*/
+
+#content{
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  height: 250%;
+  margin: 0 0 0 10%;
+}
+
+.menu{
+  border: 1px solid black;
+  margin: 20px 60px;
+  width: 200px;
+  height: 200px;
+}
+
+.menu header{
+  margin: 0;
+  padding: 30px;
+}
+
+.menu ol{
+  padding:0;
+  margin:0;
+}
+
+/*
+.far, .fas{
+  background: lightgrey;
+  font-size: 5em;
+  padding: 20px;
+}
+
+.menu tbody{
+  background: lightgrey;
+}*/
+
+.menu li{
+  list-style-position: inside;
+}
+
+
+.other{
+  display: block;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 30px;
+}
+
+#others{
+  text-align: center;
+}
+
+
+
+/*
+ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid red;
+}
+
+#main-menu{
+  float: left;
+}
+
+#main-menu>li{
+  float: left;
+}
+
+#main-menu ul{display: none;}
+
+#main-menu li:hover>ul{
+  display: block;
+}
+
+.submenu{
+  position: absolute;
+  left: 90px;
+  top:29px;
+}
+
+#category{
+  position: absolute;
+  left: 90px;
+  top:60px;
+}
+*/
+
+a:link, a:visited, a:active {color:#5A5A5A;text-decoration:none;}
+a:hover  { color:#054a85; text-decoration:underline; }
+
+#menubar{
+  float:left;
+  width:100%;
+  height:95px;
+  position:relative;
+}
+
+.gnb{
+  width:100%;
+  height:96px;
+  margin:0 auto;
+}
+
+.gnb ul{
+  float: right;
+  margin:60px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.gnb li{
+  float: left;
+  margin-right:60px;
+}
+
+.snb{
+  display:none;
+  width:100%;
+  height:150px;
+  border-bottom:1px solid #cfcfcf;
+  background: white;
+  position:relative absolute;
+}
+
+.snb div{
+  width:100%;
+  height:150px;
+  margin:0 auto;
+}
+
+.snb ul{
+  float:left;
+  width:100%;
+  height:150px;
+  margin:10px 0 0 550px;
+  padding:0;
+  list-style:none;
+  color:#5a5a5a;
+  letter-spacing:-0.07em;
+  text-align:right;
+}

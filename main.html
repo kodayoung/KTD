@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+    <title>한국 통상 공공데이터 포털</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script>
+    var zoomx = 100;
+      $(document).ready(function() {
+        $(".gnb").hover(
+          function() {
+            $(".snb").stop().slideDown(400);
+          },
+          function() {
+            $(".snb").stop().slideUp(600);
+          }
+        );
+
+        $(".snb").hover(
+          function() {
+            $(".snb").stop().slideDown(400);
+          },
+          function() {
+            $(".snb").stop().slideUp(600);
+          }
+        );
+
+        $(".tabBtn").hover(
+          function() {
+
+            $(this).children(".icon_normal").css("display","none");
+            $(this).children(".icon_over").css("display","block");
+          },
+          function() {
+            $(this).children(".icon_over").css("display","none");
+            $(this).children(".basic").css("display","block");
+          }
+        );
+
+        $(".tabBtn").click(
+          function() {
+
+            $("."+$(this).attr("tarx")).children(".icon_normal").addClass("basic");
+            $("."+$(this).attr("tarx")).children(".icon_over").removeClass("basic");
+            $(this).children(".icon_over").addClass("basic");
+            $(this).children(".icon_normal").removeClass("basic");
+
+            $("."+$(this).attr("tarx")).children(".icon_over").css("display","none");
+            $("."+$(this).attr("tarx")).children(".icon_normal").css("display","none");
+            $("."+$(this).attr("tarx")).children(".basic").css("display","block");
+
+
+            $("."+$(this).attr("tarc")).css("display","none");
+            $("#"+$(this).attr("tar")).css("display","block");
+
+            $("#"+$(this).attr("tarmc")).attr("href", $(this).attr("tarm"));
+
+          }
+        );
+
+      });
+    function body_zoomin() {
+      zoomx = zoomx + 10;
+      $("body").css("zoom",zoomx + "%");
+    }
+    function body_zoomout() {
+      zoomx = zoomx - 10;
+      $("body").css("zoom",zoomx + "%");
+    }
+    function body_zoomdef() {
+      zoomx = 100;
+      $("body").css("zoom",zoomx + "%");
+    }
+    function newWin(url,w,h) {
+    window.open
+    (url,'new_win','width='+w+',height='+h+',toolbars=no,menubars=no,scrollbars=auto');
+    }
+  </script>
+  </head>
+
+  <aside class="side">
+    <a href="">회원가입</a>
+    <a href="">로그인</a>
+    <a href="">English version</a>
+  </aside>
+
+  <body>
+
+    <!--
+    <nav>
+      <table>
+        <thead>
+          <tr>
+            <th><a href="">소개</a></th>
+            <th><a href="">정보 검색</a></th>
+            <th><a href="">실시간 뉴스</a></th>
+            <th><a href="">이용 안내</a></th>
+            <th><a href="">문의</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><ul>
+              <li>KTD 웹사이트 소개</li>
+              <li>사업 소개</li>
+              <li>협업 기관 소개</li>
+            </ul></td>
+            <td><ul>
+              <li>카테고리<ul>
+                <li>무역협정분야</li>
+                <li>투자협정분야</li>
+                <li>국제협력분야</li>
+              </ul></li>
+              <li>키워드 검색</li>
+              <li>AI 추천 데이터</li>
+            </ul></td>
+            <td><ul>
+              <li>무역 관련 뉴스</li>
+              <li>투자 관련 뉴스</li>
+              <li>실시간 정보 업데이트</li>
+              <li>공지사항</li>
+            </ul></td>
+            <td><ul>
+              <li>구독 신청/취소</li>
+              <li>AI 시스템 이용</li>
+              <li>컨설팅 프로그램</li>
+              <li>교육 프로그램</li>
+            </ul></td>
+            <td><ul>
+              <li>문의처</li>
+              <li>정보오류신고</li>
+              <li>자유게시판</li>
+              <li>찾아오시는 길</li>
+            </ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </nav>
+    -->
+
+    <!--
+    <div id="menubar">
+    <nav>
+        <ul id="main-menu">
+          <li><a href="">소개</a>
+            <ul class="submenu">
+              <li>KTD 웹 사이트 소개</li>
+              <li>사업 소개</li>
+              <li>협업 기관 소개</li>
+            </ul>
+          </li>
+
+          <li><a href="">정보 검색</a>
+            <ul class="submenu">
+              <li>카테고리
+              <ul id="category">
+                <li>무역협정분야</li>
+                <li>투자협정분야</li>
+                <li>국제협력분야</li>
+              </ul>
+              </li>
+              <li>키워드 검색</li>
+              <li>AI 추천 데이터</li>
+            </ul>
+          </li>
+
+          <li><a href="">실시간 뉴스</a>
+            <ul class="submenu">
+              <li>무역 관련 뉴스</li>
+              <li>투자 관련 뉴스</li>
+              <li>실시간 정보 업데이트</li>
+              <li>공지사항</li>
+            </ul>
+          </li>
+
+          <li><a href="">이용 안내</a>
+            <ul class="submenu">
+              <li>구독 신청/취소</li>
+              <li>AI 시스템 이용</li>
+              <li>컨설팅 프로그램</li>
+              <li>교육 프로그램</li>
+            </ul>
+          </li>
+
+          <li><a href="">문의</a>
+            <ul class="submenu">
+              <li>문의처</li>
+              <li>정보오류신고</li>
+              <li>자유게시판</li>
+              <li>찾아오시는 길</li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+    </div>
+  -->
+
+  <div id="menubar">
+    <div class="gnb">
+      <h1>KTD<small>(Korea Trade Data)</small></h1>
+      <ul>
+        <li>소개</li>
+        <li>정보검색</li>
+        <li>실시간 뉴스</li>
+        <li>이용 안내</li>
+        <li>문의</li>
+      </ul>
+    </div>
+
+    <div class="snb">
+      <div>
+        <ul>
+          <li style="float:left; width:100px; height:180px; margin-right:15px;">
+            <ul style="width:100px; margin:0; padding:0; list-style:none;">
+              <li style="margin:0 0 15px;"><a href="">웹사이트 소개</a></li>
+              <li style="margin:0 0 15px;"><a href="">사업 소개</a></li>
+              <li style="margin:0 0 15px;"><a href="">협업 기관 소개</a></li>
+            </ul>
+          </li>
+          <li style="float:left; width:100px; height:180px;margin-right:0px;">
+            <ul style="width:100px; margin:0; padding:0; list-style:none; ">
+              <li style="margin:0 0 15px;"><a href="">카테고리</a></li>
+              <li style="margin:0 0 15px;"><a href="">키워드 검색</a></li>
+              <li style="margin:0 0 15px;"><a href="">AI 추천 데이터</a></li>
+            </ul>
+          </li>
+          <li style="float:left; width:100px; height:180px;margin-right:55px;">
+            <ul style="width:140px; margin:0; padding:0; list-style:none; ">
+              <li style="margin:0 0 15px;"><a href="">무역 관련 뉴스</a></li>
+              <li style="margin:0 0 15px;"><a href="">투자 관련 뉴스</a></li>
+              <li style="margin:0 0 15px;"><a href="">실시간 정보 업데이트</a></li>
+              <li style="margin:0 0 15px;"><a href="">공지사항</a></li>
+            </ul>
+          </li>
+          <li style="float:left; width:100px; height:180px;margin-right:5px;">
+            <ul style="width:110px; margin:0; padding:0; list-style:none; ">
+              <li style="margin:0 0 15px;"><a href="">구독 신청/취소</a></li>
+              <li style="margin:0 0 15px;"><a href="">AI 시스템 이용</a></li>
+              <li style="margin:0 0 15px;"><a href="">컨설팅 프로그램</a></li>
+              <li style="margin:0 0 15px;"><a href="">교육 프로그램</a></li>
+            </ul>
+          </li>
+          <li style="float:left; width:100px; height:180px;margin-right:0px;">
+            <ul style="width:100px; margin:0; padding:0; list-style:none; ">
+              <li style="margin:0 0 15px;"><a href="">문의처</a></li>
+              <li style="margin:0 0 15px;"><a href="">정보오류신고</a></li>
+              <li style="margin:0 0 15px;"><a href="">자유게시판</a></li>
+              <li style="margin:0 0 15px;"><a href="">찾아오시는 길</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <section class="menu">
+        <header>실시간 통상 뉴스</header>
+        <!--
+        <article>
+          <i class="far fa-newspaper"></i>
+      </article>-->
+      </section>
+      <section class="menu">
+        <header>지자체 실적</header>
+          <article>
+            <table>
+              <tbody>
+                <tr>
+                <!--<td>1등<br><i class="fas fa-tree"></i></td>
+                <td>2등<br><i class="fas fa-tree"></i></td>
+                <td>3등<br><i class="fas fa-tree"></i></td>-->
+                </tr>
+              </tbody>
+            </table>
+          </article>
+      </section>
+      <section class="menu">
+        <header>공지사항</header>
+          <article>
+            <ol>
+              <li>공지내용</li>
+              <li>공지내용</li>
+              <li>공지내용</li>
+            </ol>
+          </article>
+        </section>
+    </div>
+
+    <div id="others">
+    <aside class="other">
+      구독자 이벤트
+      <!--
+      <i class="fas fa-gifts"></i>
+    -->
+    </aside>
+
+    <footer class="other"><!--<i class="fas fa-ad"></i>--></footer>
+  </div>
+
+  </body>
+</html>
