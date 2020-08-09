@@ -2,84 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+
     <title>한국 통상 공공데이터 포털</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <script>
-    var zoomx = 100;
-      $(document).ready(function() {
-        $(".gnb").hover(
-          function() {
-            $(".snb").stop().slideDown(400);
-          },
-          function() {
-            $(".snb").stop().slideUp(600);
-          }
-        );
-
-        $(".snb").hover(
-          function() {
-            $(".snb").stop().slideDown(400);
-          },
-          function() {
-            $(".snb").stop().slideUp(600);
-          }
-        );
-
-        $(".tabBtn").hover(
-          function() {
-
-            $(this).children(".icon_normal").css("display","none");
-            $(this).children(".icon_over").css("display","block");
-          },
-          function() {
-            $(this).children(".icon_over").css("display","none");
-            $(this).children(".basic").css("display","block");
-          }
-        );
-
-        $(".tabBtn").click(
-          function() {
-
-            $("."+$(this).attr("tarx")).children(".icon_normal").addClass("basic");
-            $("."+$(this).attr("tarx")).children(".icon_over").removeClass("basic");
-            $(this).children(".icon_over").addClass("basic");
-            $(this).children(".icon_normal").removeClass("basic");
-
-            $("."+$(this).attr("tarx")).children(".icon_over").css("display","none");
-            $("."+$(this).attr("tarx")).children(".icon_normal").css("display","none");
-            $("."+$(this).attr("tarx")).children(".basic").css("display","block");
-
-
-            $("."+$(this).attr("tarc")).css("display","none");
-            $("#"+$(this).attr("tar")).css("display","block");
-
-            $("#"+$(this).attr("tarmc")).attr("href", $(this).attr("tarm"));
-
-          }
-        );
-
-      });
-    function body_zoomin() {
-      zoomx = zoomx + 10;
-      $("body").css("zoom",zoomx + "%");
-    }
-    function body_zoomout() {
-      zoomx = zoomx - 10;
-      $("body").css("zoom",zoomx + "%");
-    }
-    function body_zoomdef() {
-      zoomx = 100;
-      $("body").css("zoom",zoomx + "%");
-    }
-    function newWin(url,w,h) {
-    window.open
-    (url,'new_win','width='+w+',height='+h+',toolbars=no,menubars=no,scrollbars=auto');
-    }
-  </script>
+    <script src="script.js"></script>
   </head>
 
   <aside class="side">
